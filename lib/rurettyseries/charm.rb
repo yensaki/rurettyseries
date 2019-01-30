@@ -1,6 +1,6 @@
 module Rurettyseries
   class Charm < Base
-    ATTR_KEYS = %i(id slug name).freeze
+    ATTR_KEYS = %i[id slug name].freeze
 
     ATTR_KEYS.each do |key|
       define_method key do

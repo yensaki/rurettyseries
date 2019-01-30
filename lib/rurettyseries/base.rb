@@ -3,21 +3,21 @@ module Rurettyseries
     attr_reader :attributes
 
     def initialize(attributes)
-      @attributes = attributes.map { |k, v| [k.to_sym, v] }.to_h
+      @attributes = attributes.map {|k, v| [k.to_sym, v] }.to_h
     end
 
     def match?(attrs)
-      attrs.all? { |key, value| @attributes[key.to_sym] == value }
+      attrs.all? {|key, value| @attributes[key.to_sym] == value }
     end
 
     class << self
       def all
-        @all ||= config.map { |attributes| new(attributes) }
+        @all ||= config.map {|attributes| new(attributes) }
       end
 
       def find_by(attributes)
         raise ArgumentError unless (attributes.keys - attr_keys).empty?
-        all.find { |obj| obj.match?(attributes) }
+        all.find {|obj| obj.match?(attributes) }
       end
 
       private

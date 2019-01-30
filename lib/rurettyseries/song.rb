@@ -1,6 +1,6 @@
 module Rurettyseries
   class Song < Base
-    ATTR_KEYS = %i(title singer writer composer arranger).freeze
+    ATTR_KEYS = %i[title singer writer composer arranger].freeze
 
     ATTR_KEYS.each do |key|
       define_method key do
