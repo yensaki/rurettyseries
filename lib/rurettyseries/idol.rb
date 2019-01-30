@@ -1,6 +1,6 @@
 module Rurettyseries
   class Idol < Base
-    ATTR_KEYS = %i(slug name cast_name charm_id).freeze
+    ATTR_KEYS = %i[slug name cast_name charm_id].freeze
 
     ATTR_KEYS.each do |key|
       define_method key do

@@ -1,6 +1,6 @@
 module Rurettyseries
   class Brand < Base
-    ATTR_KEYS = %i(id name kana charm_id).freeze
+    ATTR_KEYS = %i[id name kana charm_id].freeze
 
     ATTR_KEYS.each do |key|
       define_method key do
